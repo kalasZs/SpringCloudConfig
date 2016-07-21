@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: dev
+  cloud:
+    config:
+      env: defalut
+      label: master
+      uri: http://localhost:${config.port:8888}
+
+server:
+  port: 8081
